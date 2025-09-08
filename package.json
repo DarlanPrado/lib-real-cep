@@ -1,5 +1,5 @@
 {
-  "name": "lib-real-cep",
+  "name": "real-cep",
   "version": "1.0.0",
   "description": "Valida cep reais e trás as informações publicas do mesmo.",
   "type": "module",
