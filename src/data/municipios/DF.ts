@@ -1,0 +1,1 @@
+export const DF = [{"nome":"BRASÍLIA","codigo_ibge":"5300108"}] as const
