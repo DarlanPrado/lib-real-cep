@@ -4,15 +4,11 @@
   "description": "Valida cep reais e trás as informações publicas do mesmo.",
   "type": "module",
   "license": "MIT",
-  "homepage": "https://github.com/author/library#readme",
+  "homepage": "https://github.com/DarlanPrado/lib-real-cep#readme",
   "bugs": {
-    "url": "https://github.com/author/library/issues"
+    "url": "https://github.com/DarlanPrado/lib-real-cep/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/author/library.git"
-  },
-  "author": "Author Name <author.name@mail.com>",
+  "author": "Darlan Prado darlanprado.contact@gmail.com",
   "files": [
     "dist"
   ],
