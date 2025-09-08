@@ -1,4 +1,4 @@
-import { CepAPi, IbgeApi } from "./api"
+    import { CepAPi, IbgeApi } from "./api"
 import type { MUNICIPIOS } from "./data/municipios"
 import { MUNICIPIOS as municipiosData } from "./data/municipios"
 
@@ -15,7 +15,22 @@ export const Validator = {
    * @param cep - CEP no formato string
    * @returns true se válido
    */
-  isValid: (cep: string): boolean => /^\d{5}-?\d{3}$/.test(cep),
+  isValid: (cep: string): boolean => {
+    const cepLimpo = cep.replace('-', '');
+
+    // Formato: 8 dígitos
+    if (!/^\d{8}$/.test(cepLimpo)) return false;
+
+    // Os dois primeiros dígitos nunca são 00
+    if (cepLimpo.startsWith('00')) return false;
+
+    // Evita sequências óbvias
+    if (/^(\d)\1{7}$/.test(cepLimpo)) return false; // 00000000, 11111111, etc.
+    if (/^12345678$/.test(cepLimpo)) return false; // sequência crescente
+    if (/^87654321$/.test(cepLimpo)) return false; // sequência decrescente
+
+    return true;
+  },
 }
 
 /**
@@ -37,12 +52,12 @@ export const Regiao = {
   /**
    * Busca todos os estados disponíveis no IBGE
    */
-  findEstados: ibgeApi.estados(),
+  findEstados: () => ibgeApi.estados(),
 
   /**
    * Busca todos os municípios disponíveis no IBGE
    */
-  findMunicipios: ibgeApi.municipios,
+  findMunicipios: () => ibgeApi.municipios(),
 
   /**
    * Dados estáticos de municípios

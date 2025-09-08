@@ -34,7 +34,7 @@ export interface RegiaoImediata{
     "regiao-intermediaria": RegiaoImediata
 }
 
-interface Municipio {
+export interface Municipio {
     id: number,
     nome: string,
     microrregiao: Microrregiao,
