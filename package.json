@@ -1,6 +1,6 @@
 {
   "name": "real-cep",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Valida cep reais e trás as informações publicas do mesmo.",
   "type": "module",
   "license": "MIT",
