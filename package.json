@@ -8,6 +8,18 @@
   "bugs": {
     "url": "https://github.com/DarlanPrado/lib-real-cep/issues"
   },
+  "keywords": [
+    "cep",
+    "cep-brazil",
+    "brasil",
+    "endereco",
+    "ibge",
+    "municipios",
+    "estados",
+    "validator",
+    "consulta-cep",
+    "real-cep"
+  ],
   "author": "Darlan Prado darlanprado.contact@gmail.com",
   "files": [
     "dist"
